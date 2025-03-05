@@ -22,17 +22,18 @@ nav {
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    margin: 5px;
 }
 nav ul li a {
     color: white;
     text-decoration: underline;
     font-family: 'bodoni FLF';
     font-size: 20px;
-    margin: 30px;
 }
 nav ul li a:hover {
     text-decoration: underline;
@@ -42,7 +43,7 @@ h1 {
     margin-top: -10px;
     margin-bottom: -3px;
     font-size: xx-large;
-    font-family: 'bodoni FLF'
+    font-family: 'bodoni FLF';
 }
 img {
     width: 100%;
@@ -61,57 +62,55 @@ footer {
 section {
     color: white;
     padding: 10px;
-    margin: 0 auto; 
-    display: block; 
-    width: 60%;
+    margin: 0 auto;
+    display: block;
+    width: 90%;
 }
 section h1 {
-    font-size: 28px; 
-    margin-left: 20px; 
+    font-size: 28px;
+    margin-left: 20px;
     margin-top: 1px;
     margin-bottom: 20px;
 }
 section p {
-    font-size: 18px; 
-    margin-left: 20px; 
-    margin-top: 10px; 
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 section#juegos {
     text-align: center;
-    border-radius: 10px; 
-    box-shadow: 16 32px 64px rgba(0, 0, 0, 0.1); 
-    padding: 20px; 
-    background-color: rgb(62, 61, 61); 
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: rgb(62, 61, 61);
 }
 section#juegos h1 {
-    font-size: 36px; 
+    font-size: 36px;
     text-align: center;
     color: #ffffff;
     margin-top: 1px;
     margin-bottom: 20px;
 }
-section#juegos img{
+section#juegos img {
     border-radius: 7px;
 }
-
 .juegos-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 auto;
-    width: 100%; 
+    width: 100%;
 }
-
 .juego1, .juego2 {
-    width: 45%; 
+    width: 100%;
     text-align: left;
+    margin-bottom: 20px;
 }
-
 .juego1 img, .juego2 img {
     width: 100%;
     height: auto;
 }
-
 .juego1 h2, .juego2 h2 {
     font-size: 24px;
     margin: 10px 0 5px 0;
@@ -119,18 +118,20 @@ section#juegos img{
 .juego1 p, .juego2 p {
     font-size: 16px;
 }
-
 .license-icons {
     display: flex;
     align-items: center;
 }
-
 .license-icons img {
     margin-left: 3px;
     height: 22px !important;
     vertical-align: text-bottom;
 }
-
 section#juegos a {
-    color: #ff6666; 
+    color: #ff6666;
+}
+@media (min-width: 600px) {
+    .juego1, .juego2 {
+        width: 45%;
+    }
 }
