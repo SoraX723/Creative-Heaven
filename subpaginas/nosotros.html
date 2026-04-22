@@ -8,14 +8,124 @@
     <link rel="stylesheet" href="../styles.css">
     <style>
         body {
-            background-image: url('../images/fondo_cielo.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background: transparent;
+        }
+        #cielo {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #6aafd6 0%, #8ec8e8 40%, #aadaf0 100%);
+        }
+        .nube {
+            position: absolute;
+            border-radius: 50%;
+            animation: flotar linear infinite;
+            will-change: transform;
+        }
+        @keyframes flotar {
+            from { transform: translateX(0); }
+            to   { transform: translateX(calc(100vw + 120vw)); }
+        }
+        .n1 {
+            width: clamp(280px, 45vw, 700px);
+            height: clamp(140px, 22vw, 350px);
+            top: 4%;
+            left: -50vw;
+            background:
+                radial-gradient(ellipse 55% 60% at 30% 60%, rgba(255,255,255,0.95) 0%, transparent 70%),
+                radial-gradient(ellipse 45% 55% at 65% 55%, rgba(255,255,255,0.90) 0%, transparent 70%),
+                radial-gradient(ellipse 35% 45% at 50% 40%, rgba(255,255,255,0.85) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 50% at 40% 70%, rgba(255,255,255,0.80) 0%, transparent 65%),
+                radial-gradient(ellipse 40% 40% at 20% 50%, rgba(255,255,255,0.75) 0%, transparent 65%);
+            animation-duration: 90s;
+            animation-delay: 0s;
+        }
+        .n2 {
+            width: clamp(180px, 30vw, 480px);
+            height: clamp(90px, 15vw, 240px);
+            top: 18%;
+            left: -35vw;
+            background:
+                radial-gradient(ellipse 50% 60% at 35% 55%, rgba(255,255,255,0.92) 0%, transparent 70%),
+                radial-gradient(ellipse 45% 50% at 65% 50%, rgba(255,255,255,0.88) 0%, transparent 68%),
+                radial-gradient(ellipse 55% 45% at 50% 65%, rgba(255,255,255,0.80) 0%, transparent 65%);
+            animation-duration: 65s;
+            animation-delay: -28s;
+        }
+        .n3 {
+            width: clamp(300px, 50vw, 750px);
+            height: clamp(150px, 25vw, 380px);
+            top: 30%;
+            left: -60vw;
+            background:
+                radial-gradient(ellipse 60% 65% at 25% 60%, rgba(255,255,255,0.90) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 55% at 60% 50%, rgba(255,255,255,0.88) 0%, transparent 68%),
+                radial-gradient(ellipse 40% 50% at 45% 35%, rgba(255,255,255,0.85) 0%, transparent 65%),
+                radial-gradient(ellipse 55% 45% at 75% 65%, rgba(255,255,255,0.75) 0%, transparent 62%);
+            animation-duration: 110s;
+            animation-delay: -50s;
+        }
+        .n4 {
+            width: clamp(120px, 20vw, 320px);
+            height: clamp(60px, 10vw, 160px);
+            top: 8%;
+            left: -25vw;
+            background:
+                radial-gradient(ellipse 55% 60% at 40% 55%, rgba(255,255,255,0.88) 0%, transparent 68%),
+                radial-gradient(ellipse 45% 50% at 70% 50%, rgba(255,255,255,0.82) 0%, transparent 65%);
+            animation-duration: 50s;
+            animation-delay: -15s;
+        }
+        .n5 {
+            width: clamp(200px, 34vw, 540px);
+            height: clamp(100px, 17vw, 270px);
+            top: 48%;
+            left: -40vw;
+            background:
+                radial-gradient(ellipse 55% 60% at 30% 58%, rgba(255,255,255,0.85) 0%, transparent 68%),
+                radial-gradient(ellipse 48% 52% at 62% 48%, rgba(255,255,255,0.82) 0%, transparent 66%),
+                radial-gradient(ellipse 40% 48% at 48% 38%, rgba(255,255,255,0.78) 0%, transparent 63%);
+            animation-duration: 75s;
+            animation-delay: -38s;
+        }
+        .n6 {
+            width: clamp(350px, 60vw, 900px);
+            height: clamp(120px, 18vw, 300px);
+            top: 60%;
+            left: -70vw;
+            opacity: 0.7;
+            background:
+                radial-gradient(ellipse 65% 60% at 30% 55%, rgba(255,255,255,0.80) 0%, transparent 68%),
+                radial-gradient(ellipse 50% 55% at 65% 50%, rgba(255,255,255,0.75) 0%, transparent 65%),
+                radial-gradient(ellipse 55% 50% at 50% 70%, rgba(255,255,255,0.70) 0%, transparent 62%);
+            animation-duration: 130s;
+            animation-delay: -60s;
+        }
+        .n7 {
+            width: clamp(100px, 16vw, 260px);
+            height: clamp(45px, 8vw, 130px);
+            top: 2%;
+            left: -20vw;
+            opacity: 0.65;
+            background:
+                radial-gradient(ellipse 55% 60% at 40% 55%, rgba(255,255,255,0.85) 0%, transparent 68%),
+                radial-gradient(ellipse 45% 50% at 68% 50%, rgba(255,255,255,0.78) 0%, transparent 65%);
+            animation-duration: 42s;
+            animation-delay: -8s;
         }
     </style>
 </head>
-<body>
+<body class="about-page">
+    <div id="cielo">
+        <div class="nube n1"></div>
+        <div class="nube n2"></div>
+        <div class="nube n3"></div>
+        <div class="nube n4"></div>
+        <div class="nube n5"></div>
+        <div class="nube n6"></div>
+        <div class="nube n7"></div>
+    </div>
     <div class="nosotros-intro">
         <h2 class="nosotros-titulo-principal">Sobre nosotros</h2>
         <p class="nosotros-parrafo-grande">Somos un grupo de amigos formado por 5 personas a las que nos encantan los videojuegos.</p>
@@ -50,8 +160,8 @@
             <p class="frase-miembro">También llamado Sanzu. Beta tester de Creative Heaven, cazador de errores y bugs. El amor era el pecado más grave de todos.</p>
         </div>
     </div>
-    <p style="text-align:center;">Las fotos usadas para referenciar a los miembros del equipo SoraX76 y Shedo han sido tomadas de internet, mientras que la de Miguelazka ha sido hecha por él, ya que a fecha de hoy no queremos revelar nuestras caras.</p>
-    <p style="text-align:center;">
+    <p style="text-align:center; color: #000000;">Las fotos usadas para referenciar a los miembros del equipo SoraX76 y Shedo han sido tomadas de internet, mientras que la de Miguelazka ha sido hecha por él, ya que a fecha de hoy no queremos revelar nuestras caras.</p>
+    <p style="text-align:center; color: #000000;">
     La foto de SoraX76 es del manga "Kobayashi-san Chi no Maid Dragon". <br>
     La foto de Shedo es del usuario de Instagram: 
     <a href="https://www.instagram.com/mha.mahamek/" target="_blank" style="color:#ff0000;">mha.mahamek</a>

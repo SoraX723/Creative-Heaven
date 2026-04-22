@@ -1,209 +1,205 @@
-html, body {
+html,
+body {
     height: 100%;
 }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #606060;
+    color: white;
+    overflow-x: hidden;
 }
+
 main {
     flex: 1 0 auto;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
 }
-footer {
-    flex-shrink: 0;
-    width: 100%;
-}
-body {
-    font-family: 'bodoni FLF';
-    font-size: 12px;
-    box-sizing: border-box;
-    background-color: #606060;
-    margin: 0;
-    padding: 0;
-}
+
 header {
     background-color: #505050;
     color: white;
-    padding: 10px;
+    padding: 12px 16px;
     display: flex;
     justify-content: center;
     margin-bottom: 0;
 }
+
 nav {
     background-color: #404040;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    width: min(100%, 1100px);
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px 18px;
 }
+
 nav ul li {
-    margin: 5px;
+    margin: 0;
 }
+
 nav ul li a {
     color: white;
     text-decoration: underline;
-    font-family: 'bodoni FLF';
-    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: clamp(1rem, 2.2vw, 1.25rem);
+    display: inline-block;
 }
+
 nav ul li a:hover {
     text-decoration: underline;
 }
+
 h1 {
     text-align: left;
-    margin-top: -10px;
-    margin-bottom: -3px;
-    font-size: xx-large;
-    font-family: 'bodoni FLF';
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.2;
 }
+
+h2 {
+    line-height: 1.25;
+}
+
 img {
     width: 100%;
     height: auto;
     display: block;
     margin: 0;
 }
-footer {
-    background-color: #454545;
-    color: white;
-    padding: 10px 0;
-    margin-top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.footer-content {
-   display: flex;
-    justify-content: space-between;
-    align-items: center;      
-    padding: 2px 24px;        
-    background: #232323;
-    color: #fff;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
-    flex-wrap: wrap;
-    min-height: 16px;
-    max-width: 1600px;
-    width: 99%;
-    margin: 0 auto;
-}
-.footer-left a,
-.footer-right a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 8px;
-    font-size: 15px;
-    transition: color 0.2s;
-}
-.footer-left a:hover,
-.footer-right a:hover {
-    color: #ffd700;
-    text-decoration: underline;
-}
-.footer-left {
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    gap: 10px; 
-}
-.footer-right {
-    text-align: right;
-    display: flex;
-    gap: 6px;                 
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
+
 section {
     color: white;
-    padding: 10px;
+    padding: 20px;
     margin: 0 auto;
     display: block;
-    width: 90%;
+    width: min(92%, 1200px);
 }
+
 section h1 {
-    font-size: 28px;
-    margin-left: 20px;
-    margin-top: 1px;
-    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 4vw, 2.25rem);
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 16px;
 }
+
 section p {
-    font-size: 18px;
-    margin-left: 20px;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    margin-left: 0;
     margin-top: 10px;
+    margin-bottom: 0;
 }
+
 section#juegos {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 24px 20px;
     background-color: rgb(62, 61, 61);
+    margin-bottom: 24px;
 }
+
 section#juegos h1 {
-    font-size: 36px;
+    font-size: clamp(2rem, 4.5vw, 2.25rem);
     text-align: center;
     color: #ffffff;
-    margin-top: 1px;
+    margin-top: 0;
     margin-bottom: 20px;
 }
+
 section#juegos img {
     border-radius: 7px;
 }
+
+section#juegos a {
+    color: #ff6666;
+}
+
 .juegos-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: stretch;
     margin: 0 auto;
     width: 100%;
+    gap: 24px;
 }
-.juego1, .juego2 {
+
+.juego1,
+.juego2 {
     width: 100%;
+    max-width: 100%;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 16px;
 }
-.juego1 img, .juego2 img {
+
+.juego1 img,
+.juego2 img {
     width: 100%;
     height: auto;
 }
-.juego1 h2, .juego2 h2 {
-    font-size: 24px;
-    margin: 10px 0 5px 0;
+
+.juego1 h2,
+.juego2 h2 {
+    font-size: clamp(1.35rem, 3vw, 1.5rem);
+    margin: 12px 0 8px 0;
 }
-.juego1 p, .juego2 p {
-    font-size: 16px;
+
+.juego1 p,
+.juego2 p {
+    font-size: 1rem;
+    margin: 0;
 }
+
 .license-icons {
     display: flex;
     align-items: center;
 }
+
 .license-icons img {
     margin-left: 3px;
     height: 22px !important;
+    width: auto;
     vertical-align: text-bottom;
 }
-section#juegos a {
-    color: #ff6666;
-}
-@media (min-width: 600px) {
-    .juego1, .juego2 {
-        width: 45%;
-    }
-}
+
 .rectangulo-info {
     background: #e0e0e0;
     border-radius: 18px;
     padding: 28px 30px 18px 30px;
     margin: 40px auto 0 auto;
-    max-width: 600px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    width: min(92%, 600px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     color: #222;
 }
+
 .equipo {
     display: flex;
     flex-direction: column;
@@ -211,65 +207,27 @@ section#juegos a {
     gap: 24px;
     margin-top: 24px;
 }
+
 .rectangulo-miembro {
     background: #e0e0e0;
     border-radius: 18px;
     padding: 22px 24px 14px 24px;
     max-width: 420px;
     width: 100%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
     color: #222;
     text-align: left;
-} 
+}
+
 .rectangulo-miembro h3 {
     margin-top: 0;
     margin-bottom: 8px;
 }
+
 .rectangulo-miembro p {
     margin: 0;
 }
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 2px 40px;
-    background: #232323;
-    color: #fff;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
-    flex-wrap: wrap;
-}
 
-.footer-left {
-    display: flex;
-    flex-direction: row;
-    gap: 18px;
-}
-
-.footer-left a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.2s;
-}
-
-.footer-left a:hover {
-    color: #10e3ff
-}
-
-.footer-right {
-    display: flex;
-    gap: 6px;              
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-.footer-icon {
-    width: 16px;
-    height: 16px;
-    filter: grayscale(1) brightness(1.5);
-    transition: filter 0.2s;
-    vertical-align: middle;
-}
 .nosotros-intro {
     text-align: center;
     margin-top: 40px;
@@ -277,26 +235,28 @@ section#juegos a {
     background: linear-gradient(180deg, #918f8f 0%, #ffffff 100%);
     border-radius: 18px;
     padding: 18px 30px 12px 30px;
-    max-width: 700px;
+    width: min(92%, 700px);
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
+
 .nosotros-parrafo-grande {
-    font-size: 1.7em;
+    font-size: clamp(1.1rem, 3vw, 1.7rem);
     color: #000000;
     margin: 0 0 18px 0;
-    font-family: 'bodoni FLF', serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
+
 .nosotros-titulo-creadores {
     text-align: center;
-    font-size: 2.2em;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
     color: #0a3a5a;
     margin-top: 40px;
     margin-bottom: 40px;
-    font-family: 'bodoni FLF', serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
-    padding: 12px 0 12px 0;
+    padding: 12px 16px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -304,66 +264,298 @@ section#juegos a {
     box-shadow: none;
     border-radius: 0;
 }
-.nosotros-titulo-seccion, .nosotros-titulo-principal {
+
+.nosotros-titulo-seccion,
+.nosotros-titulo-principal {
     text-align: center;
-    font-size: 2em;
+    font-size: clamp(1.5rem, 3.8vw, 2rem);
     color: #0a3a5a;
     margin: 24px 0 10px 0;
-    font-family: 'bodoni FLF', serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
-.nosotros-titulo-creadores, .nosotros-titulo-seccion, .nosotros-titulo-principal {
+
+.nosotros-titulo-creadores,
+.nosotros-titulo-seccion,
+.nosotros-titulo-principal {
     font-weight: bold;
 }
+
 .equipo-fotos {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: stretch;
     gap: 32px;
     margin: 0 auto 40px auto;
     max-width: 1300px;
+    flex-wrap: wrap;
+    width: min(94%, 1300px);
 }
+
 .miembro-foto {
-    flex: 1 1 0;
+    flex: 1 1 260px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(180deg, #918f8f 0%, #ffffff 100%);
     border-radius: 18px;
     padding: 36px 24px 28px 24px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
-    margin: 0 18px;
-    min-width: 260px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+    margin: 0;
+    min-width: 0;
     max-width: 400px;
+    width: 100%;
 }
+
 .foto-grande {
-    width: 200px;
-    height: 200px;
+    width: min(200px, 100%);
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 24px;
     border: 4px solid #10e3ff;
     background: #fff;
 }
+
 .miembro-foto h3 {
     margin: 10px 0 8px 0;
     font-size: 1.3em;
     color: #232323;
+    text-align: center;
 }
+
 .frase-miembro {
     font-size: 1em;
     color: #444;
     text-align: center;
     margin: 0;
 }
+
+footer {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #454545;
+    color: white;
+    padding: 10px 0;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px 24px;
+    padding: 10px 20px;
+    background: #232323;
+    color: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+    flex-wrap: wrap;
+    min-height: 16px;
+    max-width: 1600px;
+    width: min(99%, 1600px);
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 18px;
+}
+
+.footer-left {
+    justify-content: flex-start;
+}
+
+.footer-right {
+    justify-content: center;
+}
+
+.footer-left a,
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+    font-size: clamp(0.95rem, 2.2vw, 1rem);
+    transition: color 0.2s;
+}
+
+.footer-left a:hover,
+.footer-right a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    filter: grayscale(1) brightness(1.5);
+    transition: filter 0.2s;
+    vertical-align: middle;
+}
+
+.footer-icon:hover {
+    filter: grayscale(0) brightness(1.1);
+}
+
+.home-page > * {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: aparecer-suave 0.75s ease-out forwards;
+}
+
+.home-page > img#inicio {
+    animation-delay: 0.05s;
+}
+
+.home-page > header {
+    animation-delay: 0.15s;
+}
+
+.home-page > section:nth-of-type(1) {
+    animation-delay: 0.3s;
+}
+
+.home-page > section#juegos {
+    animation-delay: 0.45s;
+}
+
+.home-page > footer {
+    animation-delay: 0.6s;
+}
+
+.about-page > *:not(#cielo) {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: aparecer-suave 0.75s ease-out forwards;
+}
+
+.about-page > .nosotros-intro {
+    animation-delay: 0.1s;
+}
+
+.about-page > .nosotros-titulo-creadores {
+    animation-delay: 0.25s;
+}
+
+.about-page > .equipo-fotos {
+    animation-delay: 0.4s;
+}
+
+.about-page > p:nth-of-type(1) {
+    animation-delay: 0.55s;
+}
+
+.about-page > p:nth-of-type(2) {
+    animation-delay: 0.65s;
+}
+
+.about-page > footer {
+    animation-delay: 0.75s;
+}
+
+@keyframes aparecer-suave {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 700px) {
+    .juego1,
+    .juego2 {
+        width: calc(50% - 12px);
+    }
+}
+
 @media (max-width: 900px) {
     .equipo-fotos {
         flex-direction: column;
         align-items: center;
-        gap: 32px;
+        gap: 24px;
     }
+
     .miembro-foto {
         max-width: 90vw;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 12px;
+    }
+
+    nav {
+        padding: 10px 12px;
+    }
+
+    section {
+        width: 94%;
+        padding: 18px 14px;
+    }
+
+    section#juegos {
+        padding: 20px 14px;
+    }
+
+    .nosotros-intro {
+        padding: 16px 18px 12px 18px;
+    }
+
+    .footer-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        justify-content: center;
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .juego1,
+    .juego2,
+    .miembro-foto,
+    .rectangulo-info,
+    .rectangulo-miembro {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .footer-content {
+        padding: 12px 14px;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-page > *,
+    .about-page > *:not(#cielo) {
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 }
