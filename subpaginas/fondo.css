@@ -1,0 +1,209 @@
+body {
+    background: transparent;
+}
+
+#cielo {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #6aafd6 0%, #8ec8e8 40%, #aadaf0 100%);
+}
+
+.nube {
+    position: absolute;
+    animation: flotar linear infinite;
+    will-change: transform;
+}
+
+@keyframes flotar {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(100vw + 120vw)); }
+}
+
+/* Nube 1 - Grande y irregular */
+.n1 {
+    width: clamp(320px, 52vw, 800px);
+    height: clamp(130px, 20vw, 320px);
+    top: 5%;
+    left: -60vw;
+    border-radius: 45% 55% 52% 48% / 48% 52% 48% 52%;
+    background:
+        radial-gradient(ellipse 48% 65% at 25% 55%, rgba(255,255,255,0.98) 0%, rgba(245,245,245,0.85) 35%, transparent 70%),
+        radial-gradient(ellipse 42% 72% at 50% 48%, rgba(250,250,250,0.92) 0%, rgba(240,240,240,0.75) 40%, transparent 68%),
+        radial-gradient(ellipse 38% 58% at 72% 58%, rgba(255,255,255,0.88) 0%, rgba(235,235,235,0.60) 45%, transparent 72%),
+        radial-gradient(ellipse 35% 48% at 85% 45%, rgba(248,248,248,0.82) 0%, rgba(230,230,230,0.50) 50%, transparent 68%);
+    animation-duration: 95s;
+    animation-delay: 0s;
+}
+
+/* Nube 2 - Pequeña y alargada */
+.n2 {
+    width: clamp(140px, 24vw, 400px);
+    height: clamp(65px, 11vw, 180px);
+    top: 18%;
+    left: -30vw;
+    border-radius: 55% 45% 48% 52% / 52% 48% 55% 45%;
+    background:
+        radial-gradient(ellipse 52% 68% at 30% 60%, rgba(255,255,255,0.95) 0%, rgba(245,245,245,0.80) 38%, transparent 72%),
+        radial-gradient(ellipse 48% 62% at 65% 48%, rgba(250,250,250,0.90) 0%, rgba(240,240,240,0.70) 42%, transparent 70%);
+    animation-duration: 68s;
+    animation-delay: -18s;
+}
+
+/* Nube 3 - Muy grande y ondulada */
+.n3 {
+    width: clamp(380px, 58vw, 900px);
+    height: clamp(160px, 24vw, 400px);
+    top: 12%;
+    left: -70vw;
+    border-radius: 42% 58% 55% 45% / 45% 55% 42% 58%;
+    background:
+        radial-gradient(ellipse 45% 70% at 20% 52%, rgba(255,255,255,0.96) 0%, rgba(245,245,245,0.82) 32%, transparent 72%),
+        radial-gradient(ellipse 50% 65% at 55% 45%, rgba(250,250,250,0.91) 0%, rgba(240,240,240,0.72) 38%, transparent 70%),
+        radial-gradient(ellipse 42% 60% at 78% 58%, rgba(255,255,255,0.87) 0%, rgba(235,235,235,0.60) 45%, transparent 70%),
+        radial-gradient(ellipse 38% 55% at 92% 52%, rgba(248,248,248,0.80) 0%, rgba(225,225,225,0.48) 50%, transparent 68%);
+    animation-duration: 125s;
+    animation-delay: -55s;
+}
+
+/* Nube 4 - Pequeña e irregular */
+.n4 {
+    width: clamp(100px, 18vw, 280px);
+    height: clamp(50px, 9vw, 150px);
+    top: 8%;
+    left: -25vw;
+    border-radius: 58% 42% 45% 55% / 55% 45% 58% 42%;
+    background:
+        radial-gradient(ellipse 54% 70% at 35% 50%, rgba(255,255,255,0.92) 0%, rgba(245,245,245,0.78) 40%, transparent 72%),
+        radial-gradient(ellipse 48% 65% at 70% 55%, rgba(250,250,250,0.86) 0%, rgba(240,240,240,0.68) 45%, transparent 70%);
+    animation-duration: 52s;
+    animation-delay: -12s;
+}
+
+/* Nube 5 - Mediana y difusa */
+.n5 {
+    width: clamp(200px, 35vw, 580px);
+    height: clamp(100px, 17vw, 280px);
+    top: 28%;
+    left: -45vw;
+    border-radius: 48% 52% 50% 50% / 50% 50% 48% 52%;
+    background:
+        radial-gradient(ellipse 50% 68% at 28% 55%, rgba(255,255,255,0.90) 0%, rgba(245,245,245,0.76) 38%, transparent 72%),
+        radial-gradient(ellipse 46% 64% at 62% 48%, rgba(250,250,250,0.86) 0%, rgba(240,240,240,0.68) 43%, transparent 70%),
+        radial-gradient(ellipse 40% 58% at 80% 60%, rgba(255,255,255,0.82) 0%, rgba(230,230,230,0.55) 50%, transparent 70%);
+    animation-duration: 78s;
+    animation-delay: -35s;
+}
+
+/* Nube 6 - Muy grande y plana */
+.n6 {
+    width: clamp(360px, 62vw, 950px);
+    height: clamp(110px, 17vw, 280px);
+    top: 32%;
+    left: -80vw;
+    border-radius: 50% 50% 48% 52% / 52% 48% 50% 50%;
+    background:
+        radial-gradient(ellipse 48% 72% at 22% 58%, rgba(255,255,255,0.88) 0%, rgba(245,245,245,0.74) 35%, transparent 72%),
+        radial-gradient(ellipse 50% 68% at 58% 50%, rgba(250,250,250,0.84) 0%, rgba(240,240,240,0.65) 40%, transparent 70%),
+        radial-gradient(ellipse 44% 62% at 82% 55%, rgba(248,248,248,0.78) 0%, rgba(225,225,225,0.48) 50%, transparent 68%);
+    animation-duration: 135s;
+    animation-delay: -62s;
+}
+
+/* Nube 7 - Pequeña y compacta */
+.n7 {
+    width: clamp(110px, 19vw, 300px);
+    height: clamp(55px, 10vw, 160px);
+    top: 2%;
+    left: -22vw;
+    border-radius: 52% 48% 55% 45% / 45% 55% 52% 48%;
+    background:
+        radial-gradient(ellipse 56% 70% at 38% 52%, rgba(255,255,255,0.90) 0%, rgba(245,245,245,0.76) 40%, transparent 72%),
+        radial-gradient(ellipse 50% 65% at 68% 50%, rgba(250,250,250,0.84) 0%, rgba(240,240,240,0.66) 45%, transparent 70%);
+    animation-duration: 45s;
+    animation-delay: -10s;
+}
+
+/* Nube 8 - Grande y con forma orgánica */
+.n8 {
+    width: clamp(280px, 48vw, 720px);
+    height: clamp(120px, 19vw, 310px);
+    top: 20%;
+    left: -52vw;
+    border-radius: 45% 55% 48% 52% / 52% 48% 55% 45%;
+    background:
+        radial-gradient(ellipse 50% 68% at 26% 56%, rgba(255,255,255,0.93) 0%, rgba(245,245,245,0.79) 36%, transparent 72%),
+        radial-gradient(ellipse 48% 64% at 60% 48%, rgba(250,250,250,0.88) 0%, rgba(240,240,240,0.70) 40%, transparent 70%),
+        radial-gradient(ellipse 42% 60% at 82% 54%, rgba(255,255,255,0.84) 0%, rgba(235,235,235,0.58) 48%, transparent 70%);
+    animation-duration: 88s;
+    animation-delay: -25s;
+}
+
+/* Nube 9 - Mediana e irregular */
+.n9 {
+    width: clamp(160px, 28vw, 450px);
+    height: clamp(80px, 13vw, 220px);
+    top: 35%;
+    left: -35vw;
+    border-radius: 55% 45% 52% 48% / 48% 52% 45% 55%;
+    background:
+        radial-gradient(ellipse 52% 70% at 32% 54%, rgba(255,255,255,0.91) 0%, rgba(245,245,245,0.77) 38%, transparent 72%),
+        radial-gradient(ellipse 48% 65% at 68% 50%, rgba(250,250,250,0.87) 0%, rgba(240,240,240,0.69) 43%, transparent 70%);
+    animation-duration: 62s;
+    animation-delay: -28s;
+}
+
+/* Nube 10 - Grande y ondulante */
+.n10 {
+    width: clamp(240px, 40vw, 620px);
+    height: clamp(115px, 18vw, 300px);
+    top: 24%;
+    left: -55vw;
+    border-radius: 48% 52% 45% 55% / 55% 45% 52% 48%;
+    background:
+        radial-gradient(ellipse 50% 70% at 28% 52%, rgba(255,255,255,0.92) 0%, rgba(245,245,245,0.78) 35%, transparent 72%),
+        radial-gradient(ellipse 48% 66% at 62% 46%, rgba(250,250,250,0.89) 0%, rgba(240,240,240,0.71) 40%, transparent 70%),
+        radial-gradient(ellipse 42% 62% at 80% 56%, rgba(255,255,255,0.83) 0%, rgba(230,230,230,0.56) 48%, transparent 70%);
+    animation-duration: 98s;
+    animation-delay: -48s;
+}
+
+/* Nube 11 - Pequeña y alargada */
+.n11 {
+    width: clamp(130px, 22vw, 380px);
+    height: clamp(65px, 11vw, 190px);
+    top: 10%;
+    left: -35vw;
+    border-radius: 52% 48% 55% 45% / 45% 55% 48% 52%;
+    background:
+        radial-gradient(ellipse 54% 68% at 36% 54%, rgba(255,255,255,0.89) 0%, rgba(245,245,245,0.75) 40%, transparent 72%),
+        radial-gradient(ellipse 48% 64% at 66% 50%, rgba(250,250,250,0.85) 0%, rgba(240,240,240,0.67) 44%, transparent 70%);
+    animation-duration: 58s;
+    animation-delay: -16s;
+}
+
+/* Nube 12 - Muy grande y plena */
+.n12 {
+    width: clamp(320px, 54vw, 800px);
+    height: clamp(140px, 21vw, 340px);
+    top: 15%;
+    left: -65vw;
+    border-radius: 42% 58% 48% 52% / 52% 48% 58% 42%;
+    background:
+        radial-gradient(ellipse 48% 70% at 24% 54%, rgba(255,255,255,0.94) 0%, rgba(245,245,245,0.80) 34%, transparent 72%),
+        radial-gradient(ellipse 50% 68% at 56% 46%, rgba(250,250,250,0.90) 0%, rgba(240,240,240,0.72) 38%, transparent 70%),
+        radial-gradient(ellipse 44% 64% at 80% 56%, rgba(255,255,255,0.85) 0%, rgba(235,235,235,0.60) 46%, transparent 70%);
+    animation-duration: 120s;
+    animation-delay: -68s;
+}
+
+/* Estilos para el título Nuestros integrantes */
+.nosotros-titulo-creadores {
+    display: inline-block;
+    background: linear-gradient(180deg, #918f8f 0%, #ffffff 100%);
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #0a3a5a;
+}
